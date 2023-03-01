@@ -12,12 +12,13 @@
 
 <body>
     <header class="header">
-        <div class="container">
-            <ul>
-                <li><a href="" class="header__logo"><img src="/img/logo.svg" alt="logo" class="header__logo-img"></a>
+        <div class="container header__container">
+            <ul class="header__top">
+                <li><a class="header__logo" href=""><img src="/img/logo.svg" alt="logo" class="header__logo-img"></a>
                 </li>
                 <li><a class="header__tel-text" href="tel:+74953225448">+7 495 322-54-48</a></li>
-                <li><img src="/img/header__ico.svg" alt=""><a class="header__login-text" href="">Личный кабинет</a></li>
+                <li><img class="header__ico" src="/img/header__ico.svg" alt=""></li>
+                <li><a class="header__login-text" href="">Личный кабинет</a></li>
             </ul>
             <nav class="header__nav">
                 <ul class="header__nav-list">
@@ -27,34 +28,45 @@
                     <li class="header__nav-item"><a href="http://" class="header__nav-link">Размещение</a></li>
                     <li class="header__nav-item"><a href="http://" class="header__nav-link">Блог</a></li>
                     <li class="header__nav-item"><a href="http://" class="header__nav-link">Контакты</a></li>
+                    <li class="header__nav-button"><a href="#" class="header__nav-btn-text">Хочу тур</a></li>
+                    <li class="header__nav-button"><a href="#" class="header__nav-btn-text">Обратный звонок</a></li>
                 </ul>
             </nav>
-            <a href="#" class="header__nav-button">Хочу тур</a>
-            <a href="#" class="header__nav-button">Обратный звонок</a>
         </div>
     </header>
 
     <main>
         <section class="special-offers">
-            <div class="container">
+            <div class="container container__special-offers">
                 <h2 class="heading">Спецпредложения</h2>
-                <div class="special-offers__card">
-                    <img class="special-offers__card-img" src="/img/special-offers__card-img-1.png" alt="">
-                    <strong class="special-offers__title">Мальдивские острова</strong>
-                    <p class="special-offers__price">от 55 000</p>
-                    <a class="special-offers__more-text" href="#">Подробнее</a><img src="/img/arrow.svg" alt="">
-                </div>
-                <div class="special-offers__card">
-                    <img class="special-offers__card-img" src="/img/special-offers__card-img-2.png" alt="">
-                    <strong class="special-offers__title">Горящий тур на остров Крит</strong>
-                    <p class="special-offers__price">от 30 000</p>
-                    <a class="special-offers__more-text" href="#">Подробнее</a><img src="/img/arrow.svg" alt="">
-                </div>
-                <div class="special-offers__card">
-                    <img class="special-offers__card-img" src="/img/special-offers__card-img-3.png" alt="">
-                    <strong class="special-offers__title-big">Номера категории люкс</strong>
-                    <p class="special-offers__price-big">от 5 000</p>
-                    <a class="special-offers__more-text" href="#">Подробнее</a><img src="/img/arrow.svg" alt="">
+                <div class="special-offers__block">
+                    <div class="special-offers__card-block">
+                        <div class="special-offers__card">
+                            <div class="special-offers__card-img">
+                                <img src="/img/special-offers__card-img-1.png" alt="">
+                            </div>
+                            <strong class="special-offers__title">Мальдивские острова</strong>
+                            <p class="special-offers__price">от 55 000</p>
+                            <a class="special-offers__more-text" href="#">Подробнее</a>
+                            <img class="special-offers__arrow" src="/img/arrow.svg" alt="">
+                        </div>
+                        <div class="special-offers__card">
+                            <img class="special-offers__card-img" src="/img/special-offers__card-img-2.png" alt="">
+                            <strong class="special-offers__title">Горящий тур на остров Крит</strong>
+                            <p class="special-offers__price">от 30 000</p>
+                            <a class="special-offers__more-text" href="#">Подробнее</a>
+                            <img class="special-offers__arrow" src="/img/arrow.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="special-offers__card-block-big">
+                        <div class="special-offers__card-big">
+                            <img class="special-offers__card-img-big" src="/img/special-offers__card-img-3.png" alt="">
+                            <strong class="special-offers__title-big">Номера категории люкс</strong>
+                            <p class="special-offers__price-big">от 5 000</p>
+                            <a class="special-offers__more-text-big" href="#">Подробнее</a>
+                            <img class="special-offers__arrow-big" src="/img/arrow.svg" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -62,51 +74,71 @@
         <section class="about-us">
             <div class="container">
                 <h2 class="heading">О нас</h2>
-                <p сlass="paragraph">Идейные соображения высшего порядка, а также сложившаяся структура организации
-                    влечёт за собой
-                    процесс
-                    внедрения и модернизации системы обучения кадров, соответствует насущным потребностям. Идейные
-                    соображения
-                    высшего порядка, а также дальнейшее развитие различных форм деятельности представляет собой
-                    интересный
-                    эксперимент проверки системы обучения кадров, соответствует насущным потребностям. Равным образом
-                    сложившаяся структура организации требуют определения и уточнения существенных финансовых
-                    и административных условий.</p>
+                <div class="about-us__text">
+                    <p сlass="paragraph">Идейные соображения высшего порядка, а также сложившаяся структура
+                        организации
+                        влечёт за собой
+                        процесс
+                        внедрения и модернизации системы обучения кадров, соответствует насущным потребностям. Идейные
+                        соображения
+                        высшего порядка, а также дальнейшее развитие различных форм деятельности представляет собой
+                        интересный
+                        эксперимент проверки системы обучения кадров, соответствует насущным потребностям. Равным
+                        образом
+                        сложившаяся структура организации требуют определения и уточнения существенных финансовых
+                        и административных условий.</p>
+                </div>
             </div>
         </section>
 
         <section class="services">
             <div class="container">
                 <h2 class="heading">Услуги</h2>
-                <div class="services__card">
-                    <img class="services__card-img" src="/img/services__card-img-1.png" alt="">
-                    <a class="services__card-text" href="#">Эксклюзивное обслуживание</a>
-                    <img src="/img/arrow.svg" alt="">
-                    <p сlass="paragraph">Равным образом постоянный количественный рост и сфера нашей активности</p>
-                </div>
-                <div class="services__card">
-                    <img class="services__card-img" src="/img/services__card-img-2.png" alt="">
-                    <a class="services__card-text" href="#">Аренда банкетных залов</a>
-                    <img src="/img/arrow.svg" alt="">
-                    <p сlass="paragraph">Значимость этих проблем настолько очевидна, что дальнейшее развитие различных
-                        форм
-                    </p>
-                </div>
-                <div class="services__card">
-                    <img class="services__card-img" src="/img/services__card-img-3.png" alt="">
-                    <a class="services__card-text" href="#">Сауны, бассейны, бани, фитнес-залы</a>
-                    <img src="/img/arrow.svg" alt="">
-                    <p сlass="paragraph">Не следует, однако забывать, что начало повседневной работы по формированию
-                        позиции
-                    </p>
-                </div>
-                <div class="services__card">
-                    <img class="services__card-img" src="/img/services__card-img-4.png" alt="">
-                    <a class="services__card-text" href="#">Охраняемые автомобильные стоянки</a>
-                    <img src="/img/arrow.svg" alt="">
-                    <p сlass="paragraph">Не следуНе следует, однако забывать, что начало повседневной работы
-                        по формированию
-                        позиции</p>
+                <div class="servisec__card-box">
+                    <div class="services__card">
+                        <img class="services__card-img" src="/img/services__card-img-1.png" alt="">
+                        <div class="services__card-info">
+                            <a class="services__card-title" href="#">Эксклюзивное обслуживание</a>
+                            <img src="/img/arrow.svg" alt="">
+                            <p сlass="services__card-desc">Равным образом постоянный количественный рост
+                                и сфера нашей активности
+                            </p>
+                        </div>
+                    </div>
+                    <div class="services__card">
+                        <img class="services__card-img" src="/img/services__card-img-2.png" alt="">
+                        <div class="services__card-info">
+                            <a class="services__card-title" href="#">Аренда банкетных залов</a>
+                            <img src="/img/arrow.svg" alt="">
+                            <p сlass="services__card-desc">Значимость этих проблем настолько очевидна,
+                                что дальнейшее
+                                развитие
+                                различных
+                                форм
+                            </p>
+                        </div>
+                    </div>
+                    <div class="services__card">
+                        <img class="services__card-img" src="/img/services__card-img-3.png" alt="">
+                        <div class="services__card-info">
+                            <a class="services__card-title" href="#">Сауны, бассейны, бани, фитнес-залы</a>
+                            <img src="/img/arrow.svg" alt="">
+                            <p сlass="paragraph">Не следует, однако забывать, что начало повседневной работы
+                                по формированию
+                                позиции
+                            </p>
+                        </div>
+                    </div>
+                    <div class="services__card">
+                        <img class="services__card-img" src="/img/services__card-img-4.png" alt="">
+                        <div class="services__card-info">
+                            <a class="services__card-title" href="#">Охраняемые автомобильные стоянки</a>
+                            <img src="/img/arrow.svg" alt="">
+                            <p сlass="paragraph">Не следуНе следует, однако забывать, что начало повседневной работы
+                                по формированию
+                                позиции</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -339,10 +371,10 @@
             <p>Представленная на сайте информация носит справочный характер и не является публичной офертой</p>
             <a href="">Пользовательское соглашение</a>
             <p>11710, улица Юности, дом 5 строение 4, офис 2</p>
-            <ol>
+            <ul>
                 <li class="">+99455-283-33-24</li>
                 <li class="">+99451-205-48-02</li>
-            </ol>
+            </ul>
             <ul>
                 <li class=""><a class="" href="lg.oona@mail.ru">lg.oona@mail.ru</a></li>
                 <li class=""><a class="" href="hotels.ln@mail.ru">hotels.ln@mail.ru</a></li>
