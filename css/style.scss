@@ -356,32 +356,28 @@ img {
         display: flex;
         flex-wrap: wrap;
         gap: 22px;
+
+        .advantage__block {
+            // width: 276px;
+            height: 276px;
+            width: calc((100% - 22px) / 4 - 11px);
+            background: #FFFFFF;
+            border-radius: 15px;
+            padding: 40px 42px 32px 45px;
+        }
+    }
+}
+
+.accommodation {
+    margin-bottom: 70px;
+
+    .accommodation__block {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
     }
 
-    .advantage__block {
-        // width: 276px;
-        height: 276px;
-        width: calc((100% - 22px) / 4 - 11px);
-        background: #FFFFFF;
-        border-radius: 15px;
+    .accommodation__card {
+        width: calc((100% - 24px) / 3 - 12.5px);
     }
-
-    .advantage__desc {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 200%;
-        color: #000000;
-        margin: auto;
-    }
-
-    .advantage__desc::before {
-        // content: url(/img/advantage__block-img-1.svg);
-        // position: absolute;
-        background-image: url(/img/advantage__block-img-1.svg);
-
-    }
-
-    // .advantage__img {
-    //     background-position: 40px 30px;
-    // }
 }
