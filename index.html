@@ -12,13 +12,28 @@
 
 <body>
     <header class="header">
-        <div class="container header__container">
+        <div class="container">
             <ul class="header__top">
-                <li><a class="header__logo" href=""><img src="/img/logo.svg" alt="logo" class="header__logo-img"></a>
+                <!-- <li>
+                    <a class="header__logo" href=""><img src="/img/logo.svg" alt="logo" class="header__logo-img"></a>
                 </li>
-                <li><a class="header__tel-text" href="tel:+74953225448">+7 495 322-54-48</a></li>
-                <li><img class="header__ico" src="/img/header__ico.svg" alt=""></li>
-                <li><a class="header__login-text" href="">Личный кабинет</a></li>
+                <li>
+                    <a class="header__tel-text" href="tel:+74953225448">+7 495 322-54-48</a>
+                </li> -->
+                <!-- <li>
+                    <img class="header__ico" src="/img/header__ico.svg" alt="">
+                </li>
+                <li>
+                    <a class="header__login-text" href="">Личный кабинет</a>
+                </li> -->
+                <li style="display: flex; align-items: center;">
+                    <a class="header__logo" href=""><img src="/img/logo.svg" alt="logo" class="header__logo-img"></a>
+                    <a class="header__tel-text" href="tel:+74953225448">+7 495 322-54-48</a>
+                </li>
+                <li style="align-items: center;">
+                    <img class="header__ico" src="/img/header__ico.svg" alt="">
+                    <a class="header__login-text" href="">Личный кабинет</a>
+                </li>
             </ul>
             <nav class="header__nav">
                 <ul class="header__nav-list">
@@ -37,38 +52,44 @@
 
     <main>
         <section class="special-offers">
-            <div class="container container__special-offers">
+            <div class="container">
                 <h2 class="heading">Спецпредложения</h2>
                 <div class="special-offers__block">
-                    <div class="special-offers__card-block">
-                        <article class="special-offers__card">
-                            <div class="special-offers__card-img">
+                    <div class="special-offers__block-left">
+                        <article class="special-offers__card special-offers__island-maldives">
+                            <!-- <div class="special-offers__card-img">
                                 <img src="/img/special-offers__card-img-1.png" alt="">
+                            </div> -->
+                            <div class="special-offers__card-box special-offers__bg">
+                                <strong class="special-offers__title">Мальдивские острова</strong>
+                                <p class="special-offers__price">от 55 000</p>
+                                <a class="special-offers__more-text" href="#">Подробнее</a>
+                                <img class="special-offers__arrow" src="/img/arrow.svg" alt="">
                             </div>
-                            <strong class="special-offers__title">Мальдивские острова</strong>
-                            <p class="special-offers__price">от 55 000</p>
-                            <a class="special-offers__more-text" href="#">Подробнее</a>
-                            <img class="special-offers__arrow" src="/img/arrow.svg" alt="">
                         </article>
-                        <article class="special-offers__card">
-                            <div class="special-offers__card-img">
+                        <article class="special-offers__card special-offers__island-crete">
+                            <!-- <div class="special-offers__card-img">
                                 <img src="/img/special-offers__card-img-2.png" alt="">
+                            </div> -->
+                            <div class="special-offers__card-box special-offers__bg">
+                                <strong class="special-offers__title">Горящий тур на остров Крит</strong>
+                                <p class="special-offers__price">от 30 000</p>
+                                <a class="special-offers__more-text" href="#">Подробнее</a>
+                                <img class="special-offers__arrow" src="/img/arrow.svg" alt="">
                             </div>
-                            <strong class="special-offers__title">Горящий тур на остров Крит</strong>
-                            <p class="special-offers__price">от 30 000</p>
-                            <a class="special-offers__more-text" href="#">Подробнее</a>
-                            <img class="special-offers__arrow" src="/img/arrow.svg" alt="">
                         </article>
                     </div>
-                    <div class="special-offers__card-block-big">
-                        <article class="special-offers__card-big">
-                            <div class="special-offers__card-img-big">
+                    <div class="special-offers__block-right">
+                        <article class="special-offers__card-big special-offers__luxury-rooms">
+                            <!-- <div class="special-offers__card-img-big">
                                 <img src="/img/special-offers__card-img-3.png" alt="">
+                            </div> -->
+                            <div class="special-offers__card-box-big">
+                                <strong class="special-offers__title-big">Номера категории люкс</strong>
+                                <p class="special-offers__price-big">от 5 000</p>
+                                <a class="special-offers__more-text-big" href="#">Подробнее</a>
+                                <img class="special-offers__arrow-big" src="/img/arrow.svg" alt="">
                             </div>
-                            <strong class="special-offers__title-big">Номера категории люкс</strong>
-                            <p class="special-offers__price-big">от 5 000</p>
-                            <a class="special-offers__more-text-big" href="#">Подробнее</a>
-                            <img class="special-offers__arrow-big" src="/img/arrow.svg" alt="">
                         </article>
                     </div>
                 </div>
