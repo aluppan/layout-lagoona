@@ -67,26 +67,33 @@ img {
   font-size: 20px;
   line-height: 20px;
   color: #666666;
+  display: flex;
+  align-items: center;
 }
 .header__top .header__ico {
-  margin-right: 5px;
+  height: 14px;
+  margin-left: auto;
+  background: url(/img/header__ico.svg) no-repeat center left;
 }
 .header__top .header__login-text {
   font-size: 16px;
   line-height: 16px;
   color: #CC9933;
+  padding-left: 28px;
 }
 .header .header__nav {
   background: #FFFFFF;
   border-radius: 15px;
   margin-bottom: 70px;
   padding: 12px 45px;
+  display: flex;
+  justify-content: space-between;
 }
 .header .header__nav .header__nav-list {
   display: flex;
   align-items: center;
 }
-.header .header__nav .header__nav-list .header__nav-item:nth-child(-n+5) {
+.header .header__nav .header__nav-list .header__nav-item:not(:last-child) {
   margin-right: 45px;
 }
 .header .header__nav .header__nav-list .header__nav-link {
@@ -94,19 +101,18 @@ img {
   line-height: 16px;
   color: #666666;
 }
-.header .header__nav .header__nav-list .header__nav-button {
+.header .header__nav .header__nav-button {
+  background: #FFFFFF;
   padding: 13px 20px;
   border: 1px solid #CC9933;
   border-radius: 10px;
-}
-.header .header__nav .header__nav-list .header__nav-button:not(:last-child) {
-  margin-left: 114px;
-  margin-right: 40px;
-}
-.header .header__nav .header__nav-list .header__nav-btn-text {
   font-size: 16px;
   line-height: 16px;
   color: #CC9933;
+}
+.header .header__nav .header__nav-button:not(:last-child) {
+  margin-right: 40px;
+  margin-left: auto;
 }
 
 .heading {
@@ -175,6 +181,8 @@ img {
   font-size: 16px;
   line-height: 16px;
   color: #F0BF5F;
+  background: url(/img/arrow.svg) no-repeat right center;
+  padding-right: 14px;
 }
 .special-offers .special-offers__block .special-offers__block-right {
   max-width: 49%;
@@ -208,11 +216,13 @@ img {
   margin-top: 15px;
   margin-bottom: 45px;
 }
-.special-offers .special-offers__block .special-offers__block-right .special-offers__more-text-big {
+.special-offers .special-offers__block .special-offers__block-right .special-offers__more-text {
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
   color: #F0BF5F;
+  background: url(/img/arrow.svg) no-repeat right center;
+  padding-right: 14px;
 }
 
 .paragraph {
