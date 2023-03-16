@@ -368,16 +368,17 @@ img {
 
     .accommodation__block {
         display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
         gap: 24px;
 
         .accommodation__card {
-            width: calc((100% - 24px) / 3 - 12.5px);
+            width: calc((100% - 24px) / 3 - 8px);
             background: #FFFFFF;
             border-radius: 15px;
 
             .accommodation__info {
-                padding: 32px 45px 50px 45px;
+                padding: 32px 45px 48px 45px;
             }
 
             .accommodation__price-accent {
