@@ -109,6 +109,7 @@ img {
   font-size: 16px;
   line-height: 16px;
   color: #CC9933;
+  cursor: pointer;
 }
 .header .header__nav .header__nav-button:not(:last-child) {
   margin-right: 40px;
@@ -293,7 +294,6 @@ img {
   gap: 22px;
 }
 .advantage .advantage__item .advantage__block {
-  height: 276px;
   width: calc((100% - 22px) / 4 - 11px);
   background: #FFFFFF;
   border-radius: 15px;
@@ -308,6 +308,67 @@ img {
   flex-wrap: wrap;
   gap: 24px;
 }
-.accommodation .accommodation__card {
+.accommodation .accommodation__block .accommodation__card {
   width: calc((100% - 24px) / 3 - 12.5px);
+  background: #FFFFFF;
+  border-radius: 15px;
+}
+.accommodation .accommodation__block .accommodation__card .accommodation__info {
+  padding: 32px 45px 50px 45px;
+}
+.accommodation .accommodation__block .accommodation__card .accommodation__price-accent {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #999999;
+}
+.accommodation .accommodation__block .accommodation__card .accommodation__price-note {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #000000;
+}
+.accommodation .accommodation__block .accommodation__card .accommodation__price {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: #000000;
+}
+.accommodation .accommodation__block .accommodation__card .accommodation__price-stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.accommodation .accommodation__block .accommodation__card .accommodation__price-stars .accommodation__location {
+  margin: 0;
+}
+.accommodation .accommodation__block .accommodation__card .accommodation__location {
+  margin-bottom: 33px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #999999;
+}
+.accommodation .accommodation__block .accommodation__card .accommodation__button {
+  background: #FFFFFF;
+  padding: 13px 20px;
+  border: 1px solid #CC9933;
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 16px;
+  color: #CC9933;
+}
+.accommodation .accommodation__block .accommodation__card:last-child {
+  position: relative;
+  background: url(/img/accommodation__card-img-9.png) no-repeat center center/cover;
+  padding: 376px 53px 27px 53px;
+  max-height: 440px;
+}
+.accommodation .accommodation__block .accommodation__card-more {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 200%;
+  color: #FFFFFF;
+  background: url(/img/arrow-white.svg) no-repeat center right;
+  padding-right: 14px;
 }/*# sourceMappingURL=style.css.map */
