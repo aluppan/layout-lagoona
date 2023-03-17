@@ -446,7 +446,83 @@ img {
             background: url(/img/arrow-white.svg) no-repeat center right;
             padding-right: 14px;
         }
+    }
+}
+
+.i-want-a-tour {
 
 
+
+    .i-want-a-tour__container {
+        background: #E9E9E9;
+        border-radius: 15px;
+        padding: 45px 45px 45px 40px;
+    }
+
+    .i-want-a-tour__title {
+
+        color: #000000;
+        margin-top: 0;
+        margin-bottom: 20px;
+        margin-left: 0;
+    }
+
+    .i-want-a-tour__form {
+        display: flex;
+        background: #FFFFFF;
+        border-radius: 15px;
+        margin-left: 5px;
+        padding: 32px 28px 32px 28px;
+
+        .i-want-a-tour__subtitle {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 12px;
+            color: #000000;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .i-want-a-tour__select {
+            border: none;
+            outline: none;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 16px;
+            color: #000000;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background: url(/img/i-want-a-tour__select-ico.svg) no-repeat center right;
+            padding-right: 20px;
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            display: none;
+            // background: url(/img/i-want-a-tour__date-ico.svg) no-repeat right;
+            // vertical-align: middle;
+        }
+
+        input[type="date"] {
+            border: none;
+            outline: none;
+            // padding-right: 20px;
+            // background: url(/img/i-want-a-tour__date-ico.svg) no-repeat center right;
+            // background-position: center calc(50% - 2px);
+            padding-right: 10px;
+            background: url(/img/i-want-a-tour__date-ico.svg) no-repeat;
+            background-position: right calc(50% - 3px);
+        }
+
+        .i-want-a-tour__button {
+            border: 1px solid #CC9933;
+            border-radius: 10px;
+            padding: 13px 30px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 16px;
+            background-color: #FFFFFF;
+            color: #CC9933;
+        }
     }
 }

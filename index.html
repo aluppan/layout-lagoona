@@ -556,12 +556,12 @@
         </section>
 
         <section class="i-want-a-tour">
-            <div class="container">
-                <h2 class="heading">Хочу тур</h2>
+            <div class="container i-want-a-tour__container">
+                <h2 class="heading i-want-a-tour__title">Хочу тур</h2>
                 <form class="i-want-a-tour__form" action="#">
                     <div class="i-want-a-tour__city">
-                        <label>Город вылета</label>
-                        <select>
+                        <label class="i-want-a-tour__subtitle">Город вылета</label>
+                        <select class="i-want-a-tour__select">
                             <option>Санкт-Петербург</option>
                             <option>Дубай</option>
                             <option>Баку</option>
@@ -571,8 +571,8 @@
                         </select>
                     </div>
                     <div class="i-want-a-tour__country">
-                        <label>Страна</label>
-                        <select>
+                        <label class="i-want-a-tour__subtitle">Страна</label>
+                        <select class="i-want-a-tour__select">
                             <option>Австралия</option>
                             <option>Азербайджан</option>
                             <option>Россия</option>
@@ -582,18 +582,18 @@
                         </select>
                     </div>
                     <div class="i-want-a-tour__date">
-                        <label>Дата прибытия:</label>
-                        <input type="date">
+                        <label class="i-want-a-tour__subtitle">Дата прибытия:</label>
+                        <input class="i-want-a-tour__date" type="date" value="2023-03-17">
                     </div>
                     <div class="i-want-a-tour__nights">
-                        <label for="">Ночей</label>
-                        <input type="number">
+                        <label class="i-want-a-tour__subtitle" for="">Ночей</label>
+                        <input class="i-want-a-tour__number" type="number" value="6">
                     </div>
                     <div class="i-want-a-tour__tourist">
-                        <label for="">Туристы</label>
-                        <input type="number">
+                        <label class="i-want-a-tour__subtitle" for="">Туристы</label>
+                        <input class="i-want-a-tour__number" type="number" value="2">
                     </div>
-                    <button class="accommodation__button">Найти</button>
+                    <button class="i-want-a-tour__button">Найти</button>
                 </form>
             </div>
         </section>
