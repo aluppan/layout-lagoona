@@ -8,6 +8,7 @@
         <title>Lagoona</title>
         <link rel="stylesheet" href="/css/normalize.css">
         <link rel="stylesheet" href="/css/style.css">
+        <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
 </head>
 
 <body>
@@ -18,7 +19,8 @@
                     <a class="header__logo" href=""><img src="/img/logo.svg" alt="logo" class="header__logo-img"></a>
                 </li>
                 <li>
-                    <a class="header__tel-text" href="tel:+74953225448">+7 495 322-54-48</a>
+                    <!-- <a class="header__tel-text" href="tel:+74953225448">+7 495 322-54-48</a> -->
+                    <a class="header__tel-text" href="tel:+74953225448">+99455-283-33-24</a>
                 </li>
                 <li class="header__ico">
                     <a class="header__login-text" href="">Личный кабинет</a>
@@ -559,9 +561,9 @@
             <div class="container i-want-a-tour__container">
                 <h2 class="heading i-want-a-tour__title">Хочу тур</h2>
                 <form class="i-want-a-tour__form" action="#">
-                    <div class="i-want-a-tour__city">
+                    <div class="i-want-a-tour__box">
                         <label class="i-want-a-tour__subtitle">Город вылета</label>
-                        <select class="i-want-a-tour__select">
+                        <select class="i-want-a-tour__select-city">
                             <option>Санкт-Петербург</option>
                             <option>Дубай</option>
                             <option>Баку</option>
@@ -570,9 +572,9 @@
                             <option>Cидней</option>
                         </select>
                     </div>
-                    <div class="i-want-a-tour__country">
+                    <div class="i-want-a-tour__box">
                         <label class="i-want-a-tour__subtitle">Страна</label>
-                        <select class="i-want-a-tour__select">
+                        <select class="i-want-a-tour__select-country">
                             <option>Австралия</option>
                             <option>Азербайджан</option>
                             <option>Россия</option>
@@ -581,15 +583,15 @@
                             <option>ОАЭ</option>
                         </select>
                     </div>
-                    <div class="i-want-a-tour__date">
+                    <div class="i-want-a-tour__box">
                         <label class="i-want-a-tour__subtitle">Дата прибытия:</label>
                         <input class="i-want-a-tour__date" type="date" value="2023-03-17">
                     </div>
-                    <div class="i-want-a-tour__nights">
+                    <div class="i-want-a-tour__box">
                         <label class="i-want-a-tour__subtitle" for="">Ночей</label>
                         <input class="i-want-a-tour__number" type="number" value="6">
                     </div>
-                    <div class="i-want-a-tour__tourist">
+                    <div class="i-want-a-tour__box">
                         <label class="i-want-a-tour__subtitle" for="">Туристы</label>
                         <input class="i-want-a-tour__number" type="number" value="2">
                     </div>
@@ -602,24 +604,44 @@
             <div class="container">
                 <h2 class="heading">Контакты</h2>
                 <div class="contacts__info">
-                    <h4 class="contacts__title">Адрес</h4>
-                    <p class="contacts__text">Москва, улица Юности, дом 5 строение 4, офис 2</p>
-                    <h4 class="contacts__title">Телефоны</h4>
-                    <ol>
-                        <li class="contacts__tel">+99455-283-33-24</li>
-                        <li class="contacts__tel">+99451-205-48-02</li>
-                    </ol>
-                    <h4 class="contacts__title">Email</h4>
-                    <ul>
-                        <li class="contacts__email"><a class="" href="lg.oona@mail.ru">lg.oona@mail.ru</a></li>
-                        <li class="contacts__desc">по вопросам бронирования</li>
-                        <li class="contacts__email"><a class="" href="hotels.ln@mail.ru">hotels.ln@mail.ru</a></li>
-                        <li class="contacts__desc">по вопросам сотрудничества</li>
-                    </ul>
-                    <h4 class="contacts__title">График</h4>
-                    <p class="contacts__text">Понедельник-пятница, с 10:00 до 19:00</p>
-                    <a href="#" class="contacts__button">Построить маршрут</a>
-                    <img class="contacts__img" src="/img/contacts__img.png" alt="">
+                    <div class="contacts__block-right">
+                        <ul class="contacts__list">
+                            <li class="contacts__item-box">
+                                <h4 class="contacts__title">Адрес</h4>
+                                <p class="contacts__text">Москва, улица Юности, дом 5 строение 4, офис 2</p>
+                            </li>
+                            <li class="contacts__item-box">
+                                <h4 class="contacts__title">Телефоны</h4>
+                                <ol>
+                                    <li class="contacts__tel">+99455-283-33-24</li>
+                                    <li class="contacts__tel">+99451-205-48-02</li>
+                                </ol>
+                            </li>
+                            <li class="contacts__item-box">
+                                <h4 class="contacts__title">Email</h4>
+                                <ul>
+                                    <li>
+                                        <a class="contacts__email" href="lg.oona@mail.ru">lg.oona@mail.ru</a>
+                                    </li>
+                                    <li class="contacts__desc">по вопросам бронирования</li>
+                                    <li>
+                                        <a class="contacts__email" href="hotels.ln@mail.ru">hotels.ln@mail.ru</a>
+                                    </li>
+                                    <li class="contacts__desc">по вопросам сотрудничества</li>
+                                </ul>
+                            </li>
+                            <li class="contacts__item-box">
+                                <h4 class="contacts__title">График</h4>
+                                <p class="contacts__text">Понедельник-пятница, с 10:00 до 19:00</p>
+                            </li>
+                            <li></li>
+                        </ul>
+                        <!-- <a href="#" class="contacts__button">Построить маршрут</a> -->
+                        <button class="contacts__button">Построить маршрут</button>
+                    </div>
+                    <div class="contacts__block-left">
+                        <img class="contacts__img" src="/img/contacts__img.png" alt="">
+                    </div>
                 </div>
             </div>
         </section>
@@ -627,7 +649,7 @@
     </main>
 
     <footer class="footer">
-        <div class="container">
+        <div class="container footer__container">
             <p>© 2012–2020 Управляющая компания Объединённой сети «Лагуна Хотелс»</p>
             <p>Представленная на сайте информация носит справочный характер и не является публичной офертой</p>
             <a href="">Пользовательское соглашение</a>

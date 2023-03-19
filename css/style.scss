@@ -49,7 +49,8 @@ body {
     background: #E5E5E5;
 }
 
-ul {
+ul,
+ol {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -450,8 +451,7 @@ img {
 }
 
 .i-want-a-tour {
-
-
+    margin-bottom: 70px;
 
     .i-want-a-tour__container {
         background: #E9E9E9;
@@ -474,6 +474,10 @@ img {
         margin-left: 5px;
         padding: 32px 28px 32px 28px;
 
+        .i-want-a-tour__box {
+            margin-right: 41px;
+        }
+
         .i-want-a-tour__subtitle {
             font-weight: 400;
             font-size: 12px;
@@ -483,7 +487,7 @@ img {
             display: inline-block;
         }
 
-        .i-want-a-tour__select {
+        .i-want-a-tour__select-city {
             border: none;
             outline: none;
             font-weight: 400;
@@ -494,24 +498,45 @@ img {
             -webkit-appearance: none;
             -moz-appearance: none;
             background: url(/img/i-want-a-tour__select-ico.svg) no-repeat center right;
-            padding-right: 20px;
+            padding-right: 37px;
+        }
+
+        .i-want-a-tour__select-country {
+            border: none;
+            outline: none;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 16px;
+            color: #000000;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background: url(/img/i-want-a-tour__select-ico.svg) no-repeat center right;
+            padding-right: 64px;
         }
 
         input[type="date"]::-webkit-calendar-picker-indicator {
-            display: none;
-            // background: url(/img/i-want-a-tour__date-ico.svg) no-repeat right;
-            // vertical-align: middle;
+            opacity: 0;
         }
 
         input[type="date"] {
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
             border: none;
-            outline: none;
-            // padding-right: 20px;
-            // background: url(/img/i-want-a-tour__date-ico.svg) no-repeat center right;
-            // background-position: center calc(50% - 2px);
-            padding-right: 10px;
             background: url(/img/i-want-a-tour__date-ico.svg) no-repeat;
             background-position: right calc(50% - 3px);
+        }
+
+        .i-want-a-tour__number {
+            border: none;
+            border-bottom: 1px solid #E9E9E9;
+            max-width: 121px;
+        }
+
+        input.i-want-a-tour__number::-webkit-outer-spin-button,
+        input.i-want-a-tour__number::-webkit-inner-spin-button {
+            opacity: 1;
         }
 
         .i-want-a-tour__button {
@@ -525,4 +550,93 @@ img {
             color: #CC9933;
         }
     }
+}
+
+.contacts {
+    margin-bottom: 40px;
+
+    .contacts__info {
+        display: flex;
+        justify-content: space-between;
+        background: #FFFFFF;
+        border-radius: 15px;
+        padding: 45px;
+
+        .contacts__item-box {
+            display: flex;
+            // justify-content: space-between;
+            // text-align: right;
+            border-bottom: 1px solid #E9E9E9;
+            margin-bottom: 25px;
+
+            // .contacts__item-box:last-child {
+            //     margin-bottom: 45px;
+            // }
+
+            // &:last-child {
+            //     margin-bottom: 45px;
+            // }
+
+            // .contacts__item-box:nth-child(4) {
+            //     margin-bottom: 45px;
+            // }
+
+            .contacts__title {
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 20px;
+                color: #000000;
+            }
+
+            .contacts__text {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                color: #000000;
+                max-width: 229px;
+            }
+
+            .contacts__tel {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                color: #CC9933;
+            }
+
+            .contacts__email {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                color: #CC9933;
+            }
+
+            .contacts__desc {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                color: #999999;
+            }
+        }
+
+        .contacts__item-box:last-child {
+            margin-bottom: 45px;
+        }
+
+        .contacts__button {
+            border: 1px solid #CC9933;
+            border-radius: 10px;
+            padding: 27px 29px;
+            background: #FFFFFF;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 16px;
+            color: #CC9933;
+        }
+    }
+}
+
+.footer__container {
+    background: #333333;
+    border-radius: 15px;
+    padding: 45px;
 }
