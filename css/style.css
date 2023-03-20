@@ -467,6 +467,9 @@ img {
 .contacts {
   margin-bottom: 40px;
 }
+.contacts .contacts__block-right {
+  width: 34.75%;
+}
 .contacts .contacts__info {
   display: flex;
   justify-content: space-between;
@@ -474,44 +477,52 @@ img {
   border-radius: 15px;
   padding: 45px;
 }
-.contacts .contacts__info .contacts__item-box {
+.contacts .contacts__info .contacts__box {
   display: flex;
+  align-items: baseline;
+  justify-content: space-between;
   border-bottom: 1px solid #E9E9E9;
   margin-bottom: 25px;
 }
-.contacts .contacts__info .contacts__item-box .contacts__title {
+.contacts .contacts__info .contacts__box:last-child {
+  margin-bottom: 45px;
+}
+.contacts .contacts__info .contacts__box .contacts__title {
   font-weight: 700;
   font-size: 20px;
   line-height: 20px;
   color: #000000;
+  margin: 0;
 }
-.contacts .contacts__info .contacts__item-box .contacts__text {
+.contacts .contacts__info .contacts__box .contacts__item-box {
+  margin-bottom: 23px;
+  width: 235px;
+}
+.contacts .contacts__info .contacts__box .contacts__item-box .contacts__text {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   color: #000000;
   max-width: 229px;
+  margin: 0;
 }
-.contacts .contacts__info .contacts__item-box .contacts__tel {
+.contacts .contacts__info .contacts__box .contacts__item-box .contacts__tel {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   color: #CC9933;
 }
-.contacts .contacts__info .contacts__item-box .contacts__email {
+.contacts .contacts__info .contacts__box .contacts__item-box .contacts__email {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   color: #CC9933;
 }
-.contacts .contacts__info .contacts__item-box .contacts__desc {
+.contacts .contacts__info .contacts__box .contacts__item-box .contacts__desc {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   color: #999999;
-}
-.contacts .contacts__info .contacts__item-box:last-child {
-  margin-bottom: 45px;
 }
 .contacts .contacts__info .contacts__button {
   border: 1px solid #CC9933;
@@ -524,8 +535,88 @@ img {
   color: #CC9933;
 }
 
-.footer__container {
+.footer {
+  margin-bottom: 30px;
+}
+.footer .footer__container {
   background: #333333;
   border-radius: 15px;
   padding: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  background-image: url(/img/footer__sun.svg);
+  background-repeat: no-repeat;
+  background-position: 80% bottom;
+}
+.footer .footer__container .footer__block-right {
+  max-width: 302px;
+  margin-right: 125px;
+}
+.footer .footer__container .footer__block-right .footer__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 190%;
+  color: #FFFFFF;
+  margin: 0;
+  margin-bottom: 37px;
+}
+.footer .footer__container .footer__block-right .footer__terms-of-use {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #CC9933;
+}
+.footer .footer__container .footer__block-left .footer__left-box {
+  margin: 0;
+  margin-bottom: 15px;
+}
+.footer .footer__container .footer__block-left .footer__address {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+.footer .footer__container .footer__block-left .footer__tel {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #CC9933;
+}
+.footer .footer__container .footer__block-left .footer__email {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #CC9933;
+}
+.footer .footer__container .footer__social-icon {
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: contain;
+  display: inline-grid;
+  margin-left: auto;
+}
+.footer .footer__container .footer__social-icon .footer__social-link {
+  display: block;
+  width: 25px;
+  height: 25px;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+.footer .footer__container .footer__social-icon .footer__tripadvisor {
+  background-image: url(/img/footer__ico-1.svg);
+  height: 25px;
+  width: 25px;
+  margin-bottom: 20px;
+}
+.footer .footer__container .footer__social-icon .footer__ok {
+  background-image: url(/img/footer__ico-2.svg);
+  height: 25px;
+  width: 25px;
+  margin-bottom: 20px;
+}
+.footer .footer__container .footer__social-icon .footer__vk {
+  background-image: url(/img/footer__ico-3.svg);
+  height: 25px;
+  width: 25px;
 }/*# sourceMappingURL=style.css.map */
