@@ -34,6 +34,46 @@
     font-style: normal;
 }
 
+$background-site-color: #E5E5E5;
+$link-color: #CC9933;
+$bgn-white-color: #FFFFFF;
+$more-text-color: #F0BF5F;
+$header-link-color: #666666;
+$site-text-color: #000000;
+$form-desc-color: #999999;
+$heading-and-footer: #333333;
+$i-want-a-tour-bgn-color: #E9E9E9;
+$btn-active-color: #A47312;
+$light-hover-color: #F0BF5F;
+$section-margin-bottom: 70px;
+
+@mixin button {
+    background: $bgn-white-color;
+    padding: 13px 20px;
+    border: 1px solid $link-color;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 16px;
+    color: $link-color;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+@mixin special-offers__card {
+    z-index: 0;
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+@mixin contacts__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -46,7 +86,7 @@
 
 body {
     font-family: 'Muller', sans-serif;
-    background: #E5E5E5;
+    background: $background-site-color;
 }
 
 ul,
@@ -64,8 +104,20 @@ img {
     max-width: 100%;
 }
 
-.header {
+:focus {
+    outline-color: $link-color;
+}
 
+.heading {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+    color: $heading-and-footer;
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+
+.header {
     &__top {
         display: flex;
         justify-content: space-between;
@@ -73,207 +125,223 @@ img {
         margin-top: 30px;
         margin-bottom: 30px;
         align-items: center;
+    }
 
-        .header__logo {
-            margin-right: 40px;
+    &__logo {
+        margin-right: 40px;
+    }
+
+    &__tel-text {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 20px;
+        color: $header-link-color;
+        display: flex;
+        align-items: center;
+        transition: color 0.3s ease;
+
+        &:hover,
+        &:focus {
+            color: $link-color;
         }
 
-        .header__tel-text {
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 20px;
-            color: #666666;
-            display: flex;
-            align-items: center;
-        }
-
-        .header__ico {
-            height: 14px;
-            margin-left: auto;
-            background: url(/img/header__ico.svg) no-repeat center left;
-        }
-
-        .header__login-text {
-            font-size: 16px;
-            line-height: 16px;
-            color: #CC9933;
-            padding-left: 28px;
+        &:active {
+            color: $btn-active-color;
         }
     }
 
-    .header__nav {
-        background: #FFFFFF;
+    &__ico {
+        height: 14px;
+        margin-left: auto;
+        background: url(../img/header/pointer.svg) no-repeat center left;
+    }
+
+    &__login-text {
+        font-size: 16px;
+        line-height: 16px;
+        color: $link-color;
+        padding-left: 28px;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $light-hover-color;
+        }
+
+        &:active {
+            color: $btn-active-color;
+        }
+    }
+
+    &__nav {
+        background: $bgn-white-color;
         border-radius: 15px;
         margin-bottom: 70px;
         padding: 12px 45px;
         display: flex;
         justify-content: space-between;
 
-        .header__nav-list {
+        &-list {
             display: flex;
             align-items: center;
-
-            .header__nav-item:not(:last-child) {
-                margin-right: 45px;
-            }
-
-            // .header__nav-item:nth-child(-n+5) {
-            //     margin-right: 45px;
-            // }
-
-            .header__nav-link {
-                font-size: 16px;
-                line-height: 16px;
-                color: #666666;
-            }
         }
 
-        .header__nav-button {
-            background: #FFFFFF;
-            padding: 13px 20px;
-            border: 1px solid #CC9933;
-            border-radius: 10px;
+        &-item:not(:last-child) {
+            margin-right: 45px;
+        }
+
+        &-link {
             font-size: 16px;
             line-height: 16px;
-            color: #CC9933;
-            cursor: pointer;
+            color: $header-link-color;
+            transition: color 0.3s ease;
+
+            &:hover,
+            &:focus {
+                color: $link-color;
+            }
+
+            &:active {
+                color: $btn-active-color;
+            }
         }
 
-        .header__nav-button:not(:last-child) {
+        &-button {
+            cursor: pointer;
+            @include button();
+
+            &:hover,
+            &:focus {
+                background-color: $link-color;
+                color: $bgn-white-color;
+            }
+
+            &:active {
+                background-color: $btn-active-color;
+                color: $bgn-white-color;
+            }
+        }
+
+        &-button:not(:last-child) {
             margin-right: 40px;
             margin-left: auto;
         }
     }
 }
 
-.heading {
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 40px;
-    color: #333333;
-    margin-bottom: 20px;
-    margin-left: 40px;
-}
-
 .special-offers {
+    margin-bottom: $section-margin-bottom;
 
-    margin-bottom: 70px;
-
-    .special-offers__block {
+    &__block {
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
 
-        .special-offers__block-left {
-            max-width: 49%;
-            margin-right: 24px;
+    &__block-left {
+        max-width: 49%;
+        margin-right: 24px;
+    }
 
-            .special-offers__card {
-                // line-height: 0;
-                z-index: 0;
-                position: relative;
-                background-position: center center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                border-radius: 15px;
-            }
+    &__card {
+        @include special-offers__card;
 
-            .special-offers__island-maldives {
-                background-image: url(/img/special-offers__card-img-1.png);
-            }
-
-            .special-offers__island-crete {
-                background-image: url(/img/special-offers__card-img-2.png);
-            }
-
-            .special-offers__card:first-child {
-                margin-bottom: 24px;
-            }
-
-            .special-offers__card-box {
-                padding: 40px 108px 40px 45px;
-            }
-
-            .special-offers__bg {
-                border-radius: 15px;
-                background: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%);
-            }
-
-            .special-offers__title {
-                font-weight: 700;
-                font-size: 40px;
-                line-height: 40px;
-                color: #FFFFFF;
-                text-align: left;
-            }
-
-            .special-offers__price {
-                font-weight: 400;
-                font-size: 20px;
-                line-height: 20px;
-                color: #FFFFFF;
-                opacity: 0.8;
-                margin-top: 15px;
-                margin-bottom: 43px;
-            }
-
-            .special-offers__more-text {
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 16px;
-                color: #F0BF5F;
-                background: url(/img/arrow.svg) no-repeat right center;
-                padding-right: 14px;
-            }
+        &:first-child {
+            margin-bottom: 24px;
         }
 
-        .special-offers__block-right {
-            max-width: 49%;
-
-            .special-offers__card-big {
-                // line-height: 0;
-                z-index: 0;
-                position: relative;
-                background-position: center center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                border-radius: 15px;
-            }
-
-            .special-offers__luxury-rooms {
-                background-image: url(/img/special-offers__card-img-3.png);
-            }
-
-            .special-offers__card-box-big {
-                padding: 212px 229px 40px 45px;
-            }
-
-            .special-offers__title-big {
-                font-weight: 700;
-                font-size: 60px;
-                line-height: 60px;
-                color: #FFFFFF;
-            }
-
-            .special-offers__price-big {
-                font-weight: 400;
-                font-size: 30px;
-                line-height: 30px;
-                color: #FFFFFF;
-                opacity: 0.8;
-                margin-top: 15px;
-                margin-bottom: 45px;
-            }
-
-            .special-offers__more-text {
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 16px;
-                color: #F0BF5F;
-                background: url(/img/arrow.svg) no-repeat right center;
-                padding-right: 14px;
-            }
+        &:hover {
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.7);
         }
+    }
+
+    &__island-maldives {
+        background-image: url(../img/special-offers/island-maldives.png);
+    }
+
+    &__island-crete {
+        background-image: url(../img/special-offers/island-crete.png);
+    }
+
+    &__card-box {
+        padding: 40px 108px 40px 45px;
+    }
+
+    &__bg {
+        border-radius: 15px;
+        background: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%);
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 40px;
+        color: $bgn-white-color;
+    }
+
+    &__price {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 20px;
+        color: $bgn-white-color;
+        opacity: 0.8;
+        margin-top: 15px;
+        margin-bottom: 43px;
+    }
+
+    &__more-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        color: $more-text-color;
+        background: url(/img/arrow.svg) no-repeat right center;
+        padding-right: 14px;
+        transition: color 0.3s ease, padding-right 0.2s linear;
+
+        &:hover {
+            color: $link-color;
+            padding-right: 25px;
+        }
+
+        &:active {
+            color: $bgn-white-color;
+        }
+    }
+
+    &__block-right {
+        max-width: 49%;
+    }
+
+    &__card-big {
+        @include special-offers__card;
+
+        &:hover {
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.7);
+        }
+    }
+
+    &__luxury-rooms {
+        background-image: url(../img/special-offers/luxury-rooms.png);
+    }
+
+    &__card-box-big {
+        padding: 212px 229px 40px 45px;
+    }
+
+    &__title-big {
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 60px;
+        color: $bgn-white-color;
+    }
+
+    &__price-big {
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 30px;
+        color: $bgn-white-color;
+        opacity: 0.8;
+        margin-top: 15px;
+        margin-bottom: 45px;
     }
 }
 
@@ -281,461 +349,514 @@ img {
     font-weight: 400;
     font-size: 16px;
     line-height: 200%;
-    color: #000000;
+    color: $site-text-color;
     margin: auto;
 }
 
 .about-us {
     margin-bottom: 70px;
 
-    .about-us__text {
-        width: 888px;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 200%;
-        color: #000000;
+    &__text {
+        max-width: 888px;
     }
 }
 
 .services {
     margin-bottom: 70px;
 
-    .services__card-box {
+    &__card {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
 
-        .services__card:nth-child(2n+1) {
+        &-box:nth-child(2n+1) {
             margin-right: 24px;
         }
 
-        .services__card:nth-child(-n+2) {
+        &-box:nth-child(-n+2) {
             margin-bottom: 24px;
         }
 
-        .services__card-img {
+        &-img {
             line-height: 0;
             border-radius: 15px 15px 0px 0px;
         }
 
-        .services__card-info {
+        &-info {
             padding-left: 45px;
             padding-right: 126px;
             padding-top: 26px;
             padding-bottom: 35px;
-            background: #FFFFFF;
+            background: $bgn-white-color;
             border-radius: 0px 0px 15px 15px;
             width: 573px;
-            // transform: rotate(-180deg);
         }
 
-        .services__card-title {
+        &-title {
             font-weight: 500;
             font-size: 20px;
             line-height: 200%;
-            color: #CC9933;
-        }
+            color: $link-color;
+            transition: color 0.3s ease;
 
-        .services__card-title::after {
-            content: url(/img/arrow.svg);
-            position: absolute;
-            margin-top: 3px;
-            margin-left: 7px;
+            &::after {
+                content: url(/img/arrow.svg);
+                position: absolute;
+                margin-top: 3px;
+                margin-left: 7px;
+            }
+
+            &:hover,
+            &:focus {
+                color: $light-hover-color;
+            }
+
+            &:active {
+                color: $btn-active-color;
+            }
         }
     }
 }
 
 .advantage {
-    margin-bottom: 70px;
+    margin-bottom: $section-margin-bottom;
 
-    .advantage__item {
+    &__item {
         display: flex;
         flex-wrap: wrap;
         gap: 22px;
+    }
 
-        .advantage__block {
-            // width: 276px;
-            // height: 276px;
-            width: calc((100% - 22px) / 4 - 11px);
-            background: #FFFFFF;
-            border-radius: 15px;
-            padding: 40px 42px 32px 45px;
-        }
+    &__block {
+        width: calc((100% - 22px) / 4 - 11px);
+        background: $bgn-white-color;
+        border-radius: 15px;
+        padding: 40px 42px 32px 45px;
     }
 }
 
 .accommodation {
-    margin-bottom: 70px;
+    margin-bottom: $section-margin-bottom;
 
-    .accommodation__block {
+    &__block {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 24px;
+    }
 
-        .accommodation__card {
-            width: calc((100% - 24px) / 3 - 8px);
-            background: #FFFFFF;
-            border-radius: 15px;
+    &__card {
+        width: calc((100% - 24px) / 3 - 8px);
+        background: $bgn-white-color;
+        border-radius: 15px;
+        transition: box-shadow 0.3s ease-in-out;
 
-            .accommodation__info {
-                padding: 32px 45px 48px 45px;
-            }
-
-            .accommodation__price-accent {
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 16px;
-                color: #999999;
-            }
-
-            .accommodation__price-note {
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 16px;
-                color: #000000;
-            }
-
-            .accommodation__price {
-                font-weight: 700;
-                font-size: 20px;
-                line-height: 20px;
-                color: #000000;
-            }
-
-            .accommodation__price-stars {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-
-                .accommodation__location {
-                    margin: 0;
-                }
-            }
-
-            .accommodation__location {
-                margin-bottom: 33px;
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 16px;
-                color: #999999;
-            }
-
-            .accommodation__button {
-                background: #FFFFFF;
-                padding: 13px 20px;
-                border: 1px solid #CC9933;
-                border-radius: 10px;
-                font-size: 16px;
-                line-height: 16px;
-                color: #CC9933;
-            }
+        &:hover {
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
         }
 
-        .accommodation__card:last-child {
+        &:last-child {
             position: relative;
-            background: url(/img/accommodation__card-img-9.png) no-repeat center center/cover;
+            background: url(../img/accommodation/card-img-9.png) no-repeat center center/cover;
             padding: 376px 53px 27px 53px;
             max-height: 440px;
         }
 
-        .accommodation__card-more {
+        &-more {
             font-weight: 500;
             font-size: 20px;
             line-height: 200%;
-            color: #FFFFFF;
+            color: $bgn-white-color;
             background: url(/img/arrow-white.svg) no-repeat center right;
             padding-right: 14px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+        }
+    }
+
+    &__info {
+        padding: 32px 45px 48px 45px;
+    }
+
+    &__price-accent {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        color: $form-desc-color;
+    }
+
+    &__price-note {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        color: $site-text-color;
+    }
+
+    &__price {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 20px;
+        color: $site-text-color;
+    }
+
+    &__price-stars {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__location {
+        margin-bottom: 33px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        color: $form-desc-color;
+    }
+
+    &__button {
+        @include button();
+
+        &:hover,
+        &:focus {
+            background-color: $link-color;
+            color: $bgn-white-color;
+        }
+
+        &:active {
+            background-color: $btn-active-color;
+            color: $bgn-white-color;
         }
     }
 }
 
 .i-want-a-tour {
-    margin-bottom: 70px;
+    margin-bottom: $section-margin-bottom;
 
-    .i-want-a-tour__container {
-        background: #E9E9E9;
+    &__container {
+        background: $i-want-a-tour-bgn-color;
         border-radius: 15px;
         padding: 45px 45px 45px 40px;
     }
 
-    .i-want-a-tour__title {
-
-        color: #000000;
+    &__title {
+        color: $site-text-color;
         margin-top: 0;
         margin-bottom: 20px;
         margin-left: 0;
     }
 
-    .i-want-a-tour__form {
+    &__form {
         display: flex;
-        background: #FFFFFF;
+        background: $bgn-white-color;
         border-radius: 15px;
         margin-left: 5px;
         padding: 32px 28px 32px 28px;
+    }
 
-        .i-want-a-tour__box {
-            margin-right: 41px;
+    &__box {
+        margin-right: 41px;
+    }
+
+    &__subtitle {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 12px;
+        color: $site-text-color;
+        margin-bottom: 15px;
+        display: inline-block;
+    }
+
+    &__select-city {
+        border: none;
+        outline: none;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        color: $site-text-color;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: url(../img/i-want-a-tour/select-ico.svg) no-repeat center right;
+        padding-right: 37px;
+    }
+
+    &__select-country {
+        border: none;
+        outline: none;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        color: $site-text-color;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: url(../img/i-want-a-tour/select-ico.svg) no-repeat center right;
+        padding-right: 64px;
+    }
+
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        opacity: 0;
+    }
+
+    input[type="date"] {
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        border: none;
+        background: url(../img/i-want-a-tour/date-ico.svg) no-repeat;
+        background-position: right calc(50% - 3px);
+    }
+
+    &__number {
+        border: none;
+        border-bottom: 1px solid $i-want-a-tour-bgn-color;
+        max-width: 121px;
+    }
+
+    input.i-want-a-tour__number::-webkit-outer-spin-button,
+    input.i-want-a-tour__number::-webkit-inner-spin-button {
+        opacity: 1;
+    }
+
+    &__button {
+        @include button();
+        cursor: pointer;
+        font-weight: 400;
+        padding: 13px 30px;
+
+        &:hover,
+        &:focus {
+            background-color: $link-color;
+            color: $bgn-white-color;
         }
 
-        .i-want-a-tour__subtitle {
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 12px;
-            color: #000000;
-            margin-bottom: 15px;
-            display: inline-block;
-        }
-
-        .i-want-a-tour__select-city {
-            border: none;
-            outline: none;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 16px;
-            color: #000000;
-            appearance: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            background: url(/img/i-want-a-tour__select-ico.svg) no-repeat center right;
-            padding-right: 37px;
-        }
-
-        .i-want-a-tour__select-country {
-            border: none;
-            outline: none;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 16px;
-            color: #000000;
-            appearance: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            background: url(/img/i-want-a-tour__select-ico.svg) no-repeat center right;
-            padding-right: 64px;
-        }
-
-        input[type="date"]::-webkit-calendar-picker-indicator {
-            opacity: 0;
-        }
-
-        input[type="date"] {
-            appearance: none;
-            -moz-appearance: none;
-            -webkit-appearance: none;
-            border: none;
-            background: url(/img/i-want-a-tour__date-ico.svg) no-repeat;
-            background-position: right calc(50% - 3px);
-        }
-
-        .i-want-a-tour__number {
-            border: none;
-            border-bottom: 1px solid #E9E9E9;
-            max-width: 121px;
-        }
-
-        input.i-want-a-tour__number::-webkit-outer-spin-button,
-        input.i-want-a-tour__number::-webkit-inner-spin-button {
-            opacity: 1;
-        }
-
-        .i-want-a-tour__button {
-            border: 1px solid #CC9933;
-            border-radius: 10px;
-            padding: 13px 30px;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 16px;
-            background-color: #FFFFFF;
-            color: #CC9933;
+        &:active {
+            background-color: $btn-active-color;
+            color: $bgn-white-color;
         }
     }
 }
 
 .contacts {
-    margin-bottom: 40px;
+    margin-bottom: $section-margin-bottom - 30px;
 
-    .contacts__block-right {
+    &__block-right {
         width: 34.75%;
     }
 
-    .contacts__info {
+    &__info {
         display: flex;
         justify-content: space-between;
-        background: #FFFFFF;
+        background: $bgn-white-color;
         border-radius: 15px;
         padding: 45px;
+    }
 
-        .contacts__box {
-            display: flex;
-            align-items: baseline;
-            justify-content: space-between;
-            border-bottom: 1px solid #E9E9E9;
-            margin-bottom: 25px;
+    &__box {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        border-bottom: 1px solid $i-want-a-tour-bgn-color;
+        margin-bottom: 25px;
 
-            &:last-child {
-                margin-bottom: 45px;
-            }
+        &:last-child {
+            margin-bottom: 45px;
+        }
+    }
 
-            .contacts__title {
-                font-weight: 700;
-                font-size: 20px;
-                line-height: 20px;
-                color: #000000;
-                margin: 0;
-            }
+    &__title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 20px;
+        color: $site-text-color;
+        margin: 0;
+    }
 
-            .contacts__item-box {
-                margin-bottom: 23px;
-                width: 235px;
+    &__item-box {
+        margin-bottom: 23px;
+        width: 235px;
+    }
 
-                .contacts__text {
-                    font-weight: 400;
-                    font-size: 16px;
-                    line-height: 150%;
-                    color: #000000;
-                    max-width: 229px;
-                    margin: 0;
-                }
+    &__text {
+        @include contacts__text;
+        color: $site-text-color;
+        max-width: 229px;
+        margin: 0;
+    }
 
-                .contacts__tel {
-                    font-weight: 400;
-                    font-size: 16px;
-                    line-height: 150%;
-                    color: #CC9933;
-                }
+    &__tel {
+        @include contacts__text;
+        color: $link-color;
+        transition: color 0.3s ease;
 
-                .contacts__email {
-                    font-weight: 400;
-                    font-size: 16px;
-                    line-height: 150%;
-                    color: #CC9933;
-                }
-
-                .contacts__desc {
-                    font-weight: 400;
-                    font-size: 16px;
-                    line-height: 150%;
-                    color: #999999;
-                }
-            }
-
+        &:hover,
+        &:focus {
+            color: $light-hover-color;
         }
 
-        .contacts__button {
-            border: 1px solid #CC9933;
-            border-radius: 10px;
-            padding: 27px 29px;
-            background: #FFFFFF;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 16px;
-            color: #CC9933;
+        &:active {
+            color: $btn-active-color;
+        }
+    }
+
+    &__email {
+        @include contacts__text;
+        color: $link-color;
+        transition: color 0.3s ease;
+
+        &:hover,
+        &:focus {
+            color: $light-hover-color;
+        }
+
+        &:active {
+            color: $btn-active-color;
+        }
+    }
+
+    &__desc {
+        @include contacts__text;
+        color: $form-desc-color;
+    }
+
+    &__button {
+        @include button();
+        cursor: pointer;
+        font-weight: 400;
+        padding: 27px 29px;
+
+        &:hover,
+        &:focus {
+            background-color: $link-color;
+            color: $bgn-white-color;
+        }
+
+        &:active {
+            background-color: $btn-active-color;
+            color: $bgn-white-color;
         }
     }
 }
 
 .footer {
-    margin-bottom: 30px;
+    margin-bottom: $section-margin-bottom - 40px;
 
-    .footer__container {
-        background: #333333;
+    &__container {
+        background: $heading-and-footer;
         border-radius: 15px;
         padding: 45px;
         display: flex;
         justify-content: space-between;
-        align-items: baseline;
-
-        background-image: url(/img/footer__sun.svg);
+        background-image: url(../img/footer__sun.svg);
         background-repeat: no-repeat;
         background-position: 80% bottom;
+    }
 
-        .footer__block-right {
-            max-width: 302px;
-            margin-right: 125px;
+    &__block-left {
+        max-width: 302px;
+        margin-right: 125px;
+    }
 
-            .footer__text {
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 190%;
-                color: #FFFFFF;
-                margin: 0;
-                margin-bottom: 37px;
-            }
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 190%;
+        color: $bgn-white-color;
+        margin: 0;
+        margin-bottom: 37px;
+    }
 
-            .footer__terms-of-use {
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 150%;
-                color: #CC9933;
-            }
+    &__terms-of-use {
+        @include contacts__text;
+        color: $link-color;
+        transition: color 0.3s ease;
+
+        &:hover,
+        &:focus {
+            color: $light-hover-color;
         }
 
-        .footer__block-left {
+        &:active {
+            color: $btn-active-color;
+        }
+    }
 
-            .footer__left-box {
+    &__right-box {
+        margin: 0;
+        margin-bottom: 15px;
+    }
 
-                margin: 0;
-                margin-bottom: 15px;
-            }
+    &__address {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 30px;
+        color: $bgn-white-color;
+    }
 
-            .footer__address {
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 30px;
-                color: #FFFFFF;
-            }
+    &__tel {
+        @include contacts__text;
+        color: $link-color;
+        transition: color 0.3s ease;
 
-            .footer__tel {
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 150%;
-                color: #CC9933;
-            }
-
-            .footer__email {
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 150%;
-                color: #CC9933;
-
-            }
+        &:hover {
+            color: $light-hover-color;
         }
 
-        .footer__social-icon {
-            background-repeat: no-repeat;
-            background-color: transparent;
-            background-size: contain;
-            display: inline-grid;
-            margin-left: auto;
-
-            .footer__social-link {
-                display: block;
-                width: 25px;
-                height: 25px;
-                text-indent: -9999px;
-                overflow: hidden;
-            }
-
-            .footer__tripadvisor {
-                background-image: url(/img/footer__ico-1.svg);
-                height: 25px;
-                width: 25px;
-                margin-bottom: 20px;
-            }
-
-            .footer__ok {
-                background-image: url(/img/footer__ico-2.svg);
-                height: 25px;
-                width: 25px;
-                margin-bottom: 20px;
-            }
-
-            .footer__vk {
-                background-image: url(/img/footer__ico-3.svg);
-                height: 25px;
-                width: 25px;
-            }
+        &:active {
+            color: $btn-active-color;
         }
+    }
+
+    &__email {
+        @include contacts__text;
+        color: $link-color;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $light-hover-color;
+        }
+
+        &:active {
+            color: $btn-active-color;
+        }
+    }
+
+    .footer__social {
+        // display: flex;
+        // flex-direction: column;
+        margin-left: auto;
+    }
+
+    .footer__social-item {
+        width: 25px;
+        height: 25px;
+    }
+
+    .footer__social-item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .footer__social-icon path {
+        transition: fill 0.3s ease;
+    }
+
+    .footer__social-icon:hover path {
+        fill: $link-color;
+    }
+
+    .footer__social-icon:focus path {
+        fill: $link-color;
+    }
+
+    .footer__social-icon:active path {
+        fill: $btn-active-color;
     }
 }
